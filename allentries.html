@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="MyDiary is an online journal that allows you express your thoughts and daily activities">
+	<meta name="keywords" content="mydiary, diary, journal, online journal">
+	<meta name="author" content="Samuel Adeniran">
+	<title>MyDiary</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+<body class="entry-page">
+	<header>
+		<div class="container">
+			<div class="logo">
+				<a href="index.html"><h1>MyDiary</h1></a>
+				<!-- <img src="./img/logo.jpg"> -->
+			</div>
+			<div>
+				<nav>
+					<ul>
+						<li><a href="signin.html">Sign In</a></li>
+						<li class="highlight"><a href="signup.html">Sign Up</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section class="entry">
+		<div class="form-container">
+			<div class="top-text-menu form-container">
+			<div class="text-search">
+				<h3>Your Entries</h3>
+			</div>
+			<div class="search-container"> 
+    			<form class="search-container" id=""action="#">
+      				<input class="search-input" type="text" placeholder="Search.." name="search">
+      				<button type="submit"><span class="fas fa-search"></span></button>
+    			</form>
+  			</div> 
+			</div>
+		</div>
+		
+		<div class="form-container">
+			<div>
+				<ul id="entries">
+				<li>
+					<span>25/06/2018</span>
+					<h3>Birthday Tinz</h3>
+					<p>Today is my birthday.And I am so excited.Honestly, I am happy. Much  more, I am grateful. Grateful for another year... </p>
+					<button type="submit" class="button_2">Read More</button>	
+				</li>
+
+				<li>
+					<span>26/06/2018</span>
+					<h3>Birthday Recap</h3>
+					<p>So yesterday was my birthday. Oh Boy! I had a lot of fun. And I had a barrage of calls from friends and loved ones. I felt so loved. It feels like everyday should  be my birthday...lol... </p>
+					<button type="submit" class="button_2">Read More</button>
+				</li>
+
+				<li>
+					<span>30/06/2018</span>
+					<h3>What I have been up to lately </h3>
+					<p>Well, first  Work. Work has been so intense as of late. I need to get better at managing deadlines.
+					Asides work, I realise I need to make out time to rest well.</p>
+					<button type="submit" class="button_2">Read More</button>
+				</li>
+				</ul>	
+
+				<button class="button_3 previous"><i class="fas fa-angle-double-left"></i>  Previous</button>
+				<button class="button_3 next-button">Next  <i class="fas fa-angle-double-right"></i></button>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<p>MyDiary: An Andela BootCamp Product. Copyright &copy; 2018</p>
+		</div>
+	</footer>
+
+
+</body>
+</html>
