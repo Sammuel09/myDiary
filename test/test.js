@@ -24,7 +24,6 @@ describe("/GET/api/v1/entries/:entryId", () => {
 	it("should return a single entry", (done) => {
 		chai.request(app)
 		.get("/api/v1/entries/3")
-		// .send(entry)
 		.end((err, res) => {
 			expect(res).to.have.status(200);
 			expect(res.body).to.be.an("object");
