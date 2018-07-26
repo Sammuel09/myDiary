@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
-<body>
+<body class="entry-page">
 	<header>
 		<div class="container">
 			<div class="logo">
@@ -21,48 +21,50 @@
 			<div>
 				<nav>
 					<ul>
-						<li><a href="signin.html">Sign In</a></li>
-						<li class="highlight"><a href="signup.html">Sign Up</a></li>
+						<li><a href="signIn.html">Sign In</a></li>
+						<li class="highlight"><a href="signUp.html">Sign Up</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 
-	<section>
-		<div class="container top-text">
-			<h1>Profile Page</h1>
-		</div>
-	</section>
-
 	<form class="entry" action="#" method="POST">
+		<div class="top-text">
+			<h3>Put down your thoughts</h3>
+		</div>
+		
 		<div class="form-container">
 
 			<div class="form-element">
-				<label for="username">Username</label>
-				<input type="text" name="username" id="username" value="Samuel">
-			</div>
-
-			<div class="form-element">
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" value="adeniransamuel@yahoo.com">
+				<label for="date">Date</label>
+				<input type="date" name="date" id="date" value="07/02/2018">
 			</div>
 			
 			<div class="form-element">
-				<label for="password">Password</label>
-				<input type="password" name="password" id="password" value="xxxxxxx">
+				<label for="title">Entry Title</label>
+				<input type="text" name="title" id="title" placeholder="Title" value="Lessons learned in 2018 so far">
+			</div>
+			
+			<div class="form-element">
+				<label for="entry">Your Entry</label>
+				<textarea name="entry" id="entry" placeholder="Enter your entry here">Mehn! 2018 has been kind to me. I have enjoyed God's goodness. But I have learned a lot as well. For one, I have learnt not to have a fixed mindset. That is limit my understanding of myself. Indeed, there is nothing I cannot learn how to do well with time and practise.
+				</textarea>
 			</div>
 
 			<div class="form-element">
-				<label for="password">Password</label>
-				<input type="password" name="password" id="password" value="xxxxxxx">
-			</div>
-
-			<div class="form-element">
-				<button type="submit" class="button_2">Update</button>
-			</div>
+				<button type="submit" class="button_2">Edit</button>
+				<button type="submit" class="button_2  delete-button">Delete</button>
+			</div>	
 		</div>
-	</form>	
+	</form>
+	
+	<footer>
+		<div class="container">
+			<p>MyDiary: An Andela BootCamp Product. Copyright &copy; 2018</p>
+		</div>
+	</footer>
+
 
 </body>
 </html>

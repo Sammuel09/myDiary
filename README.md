@@ -1,3 +1,7 @@
+# myDiary
+myDairy is an online journal that allows users to make daily journal entries.
+The site is published at https://sammuel09.github.io/myDiary/
+
 # Project Title
 myDiary is a note taking/journaling web application.
 
@@ -35,3 +39,4 @@ This application has the following features:
 
 ## License
 This project is licensed under the MIT License.
+
