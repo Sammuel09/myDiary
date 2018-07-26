@@ -27,10 +27,11 @@ The Backend APIs are hosted on heroku at https://mydiary-sammie.herokuapp.com/
 ## Features
 This application has the following features:
 
-The User can create entries/notes.
-The User can view all entries/notes
-The User can view particular entries/notes
-The User can edit entries/notes
-As a user, only you can access your notes.
+- create entry.
+- view all entries.
+- view entry
+- edit entry
+- As a user, only you can access your notes
+
 ## License
 This project is licensed under the MIT License.
