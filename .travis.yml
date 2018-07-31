@@ -2,3 +2,19 @@ language: node_js
 node_js:
   "node"
   "8.11.13"
+
+install:
+  -npm install
+
+before_script:
+  -chmod 0777 ./node_module/.bin/mocha
+  -curl -L https://codeclimate.com/downloads/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  -chmod +x ./cc-test-reporter
+  -./cc-test-reporter before-build
+
+script: 
+  -npm test
+
+cache:
+  directories:
+    - "node_modules"
