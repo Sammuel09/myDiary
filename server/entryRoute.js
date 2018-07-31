@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import entry from './entrycontroller.js';
+import entry from './entryController.js';
 const router = express.Router();
 
 

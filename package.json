@@ -26,8 +26,8 @@
     "request": "^2.87.0"
   },
   "scripts": {
-    "test": "mocha --require babel-register ./test/test.js",
-    "start": "nodemon index.js --exec babel-node --presets env"
+    "test": "mocha --require babel-register ./server/test/test.js",
+    "start": "nodemon ./server/index.js --exec babel-node --presets env"
   },
   "repository": {
     "type": "git",

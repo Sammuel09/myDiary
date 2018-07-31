@@ -3,14 +3,16 @@ import bodyParser from 'body-parser';
 import Joi from 'joi';
 
 const entries = [
-	{id:1, title:"Hello Diary"},
-	{id:2, title:"What a Day!"},
-	{id:3, title:"Books I love"}
+	{id:1, createdAt:"25/06/1993", title:"Hello Diary", body:"Today is my birthday."},
+	{id:2, createdAt:"26/06/1993", title:"What a Day!", body:"So yesterday was my birthday."},
+	{id:3, createdAt: "30/06/1993", title:"Books I love", body:"Work has been so intense as of late."}
 ]
 
 function validateEntry(entry) {
 	const schema = {
-		title: Joi.string().min(3).required()
+		createdAt: Joi.string().required(),
+		title: Joi.string().min(3).required(),
+		body: Joi.string().required()
 	};
 
 	return Joi.validate(entry, schema)
@@ -42,10 +44,11 @@ const create = (req, res) => {
 		return;
 	}
 
-	console.log(req.body);
 	const entry = {
 		id: entries.length + 1,
-		title: req.body.title
+		createdAt: req.body.createdAt,
+		title: req.body.title,
+		body: req.body.body,
 	}
 
 	entries.push(entry);
@@ -53,9 +56,8 @@ const create = (req, res) => {
 };
 
 const update = (req, res) => {
-	// Look up the entry
-	// If not existing, return error 404
-	const entry = entries.find( e => {
+
+	let entry = entries.find( e => {
 			return e.id === parseInt(req.params.entryId)
 		}
 	);
@@ -64,9 +66,6 @@ const update = (req, res) => {
 		return;
 	}
 
-	// Validate
-	// If invalid, return 400 - Bad Request
-
 	const { error } = validateEntry(req.body);
 
 	if(error){
@@ -74,15 +73,11 @@ const update = (req, res) => {
 		return;
 	}
 
-	//Update course
-	//Return the updated course
-	entry.title = req.body.title;
+	entry = req.body;
 	res.status(200).send(entry);
 }
 
 const remove = (req, res) => {
-	// look up the id of the particular entry
-	// if not present, return error 404
 
 	const entry = entries.find( e => {
 			return e.id === parseInt(req.params.entryId)
@@ -93,11 +88,9 @@ const remove = (req, res) => {
 		return;
 	} 
 
-	// delete the entry
 	const index = entries.indexOf(entry);
 	entries.splice(index, 1);
 
-	// send the deleted resource back to the client
 	res.status(200).send(entry);
 }
 
