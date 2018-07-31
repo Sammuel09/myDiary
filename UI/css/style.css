@@ -3,6 +3,8 @@ body {
 	padding: 0;
 	margin: 0;
 	background-color: #f4f4f4;
+	height: 100%;
+	min-height: 100%;
 }
 
 /* Globals */
@@ -10,6 +12,7 @@ body {
 	width: 60%;
 	margin: auto;
 	overflow: hidden;
+	min-height: 100%;
 }
 
 .form-container {
@@ -29,7 +32,7 @@ ul{
 }
 
 .button_1 {
-	height: 35px;
+	height: 25px;
 	padding-left: 10px;
 	padding-right: 10px;
 	background: #4997D0;
@@ -43,7 +46,7 @@ ul{
 }
 
 .button_2 {
-	height: 35px;
+	height: 25px;
 	padding-left: 10px;
 	padding-right: 10px;
 	background: #4997D0;
@@ -59,7 +62,7 @@ ul{
 }
 
 .button_3 {
-	height: 35px;
+	height: 25px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 10px;
@@ -217,9 +220,13 @@ header a:hover {
 footer {
 	padding: 20px;
 	margin-top: 20px;
+	width: 97%;
 	color: #ffffff;
 	background-color: #4997D0; 
 	text-align: center;
+	bottom: 0;
+	clear: both;
+  position: absolute;
 }
 
 
@@ -235,6 +242,9 @@ form {
 	margin: 0px auto;
 	margin-top: 20px;
 	padding-left: 10px;
+	border: 1px solid #b4b4b4;
+	border-radius: 7px;
+	background: #d7d7d7;
 }
 
 .form-element{
@@ -297,6 +307,8 @@ select {
 }
 
 
+
+
 /* allentries */
 ul#entries li{
 	list-style: none;
@@ -312,12 +324,18 @@ ul#entries li:last-child {
 	margin-bottom: 20px;
 }
 
+.allentry {
+	width:60%;
+	margin:30px auto;
+	/*background: #e4e4e4;*/
+	border-radius: 5px;
+	border: 2px solid #fff;
+}
 
 
-
-/*.search-container{
-	float: right;
-}*/
+.search-container{
+	display: inline;
+}
 
 .search-input{
 	width: 70%;
@@ -325,6 +343,7 @@ ul#entries li:last-child {
   	margin-top: 8px;
   	font-size: 17px;
   	border: none;
+  	background-color: #e4e4e4;
 }
 
 .search-container button {
@@ -347,14 +366,20 @@ ul#entries li:last-child {
 	float: right;
 }
 
+.next-button {
+	float: right;
+}
+
 .delete-button{
 	float: right;
-	background: #4997D0;
+	background: #c2c2c2;
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
 .delete-button:hover{
 	background: #ff0800;
-
+}
 
 /* media queries */
 
