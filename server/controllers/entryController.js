@@ -34,7 +34,7 @@ const viewAll = (req, res) => {
 
 const view = (req, res) => {
 	const entryId = parseInt(req.param.id);
-	db.query("select * from entries where id = $1", entryId)
+	db.query("select * from entries WHERE id = $1", entryId)
 		.then(function (data) {
 			res.status(200)
 				.json({

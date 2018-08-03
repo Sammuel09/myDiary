@@ -1,6 +1,7 @@
-import db from "./database.js";
+import db from "./database.js"; 
 
-const entries = `CREATE TABLE entries(userId integer REFERENCES users(id), 
+const entries = `CREATE TABLE entries(id integer SERIAL PRIMARY KEY,
+	userId integer REFERENCES users(id), 
 	title TEXT not null, 
 	body TEXT NOT NULL, 
 	created_at TIMESTAMP NOT NULL DEFAULT NOW(), 
