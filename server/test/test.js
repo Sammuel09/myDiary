@@ -16,7 +16,6 @@ describe("/GET/api/v1/entries", () => {
 			expect(res.body).to.be.a("array");
 			expect(res.body[0]).to.be.an("object");
 			expect(res.body[1]).to.be.an("object");
-			expect(res.body[2]).to.be.an("object");
 			expect(res.body.length).to.be.eql(3);
 			done();
 		})
@@ -30,7 +29,6 @@ describe("/GET/api/v1/entries/:entryId", () => {
 		.end((err, res) => {
 			expect(res).to.have.status(200);
 			expect(res.body).to.be.an("object");
-			expect(res.body).to.have.property("createdAt");
 			expect(res.body).to.have.property("title");
 			expect(res.body).to.have.property("body");
 			done();
@@ -41,7 +39,6 @@ describe("/GET/api/v1/entries/:entryId", () => {
 describe("/POST/api/v1/entries", () => {
 	it("should post an entry", (done) => {
 		let entry = {
-			"createdAt": "01/08/2018",
 			"title": "On recovery",
 			"body": "Hello there",
 		}
@@ -51,7 +48,6 @@ describe("/POST/api/v1/entries", () => {
 		.end((err,res) => {
 			expect(res).to.have.status(201);
 			expect(res.body).to.be.an("object");
-			expect(res.body).to.have.property("createdAt");
 			expect(res.body).to.have.property("title");
 			expect(res.body).to.have.property("body");
 			done();
@@ -72,7 +68,6 @@ describe("/PUT/api/v1/entries/:entryId", () => {
 		.end((err, res) => {
 			expect(res).to.have.status(200);
 			expect(res.body).to.be.an("object");
-			expect(res.body).to.have.property("createdAt");
 			expect(res.body).to.have.property("title");
 			expect(res.body).to.have.property("body");
 			done();
@@ -87,7 +82,6 @@ describe("/DELETE/api/v1/entries/:entryId", () => {
 		.end((err, res) => {
 			expect(res).to.have.status(200);
 			expect(res.body).to.be.an("object");
-			expect(res.body).to.have.property("createdAt");
 			expect(res.body).to.have.property("title");
 			expect(res.body).to.have.property("body");
 			done();
